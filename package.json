@@ -1,0 +1,15 @@
+{
+  "name": "docuserve",
+  "version": "0.0.1",
+  "description": "A document based JSON database",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Darin J. Weaver",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
+  }
+}

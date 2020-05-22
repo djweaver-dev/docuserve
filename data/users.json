@@ -1,0 +1,4 @@
+{
+    "admin": { "password": "admin", "perms" : "all" },
+    "guest": { "password": "guest", "perms" : "view" }
+}
