@@ -2,7 +2,7 @@
 const renderHTML = (data) => {
     if(data.auth){
         const header = document.querySelector('header')
-        header.innerHTML = data.html;
+        header.innerHTML = data.greet;
         const form = document.querySelector('form')
         form.style.display = 'none';
     }

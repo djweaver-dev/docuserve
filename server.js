@@ -10,7 +10,7 @@ const port = process.env.PORT || 3001
 const publicDir = path.join(process.cwd(), '/public/')
 const compDir = path.join(process.cwd(), '/components/')
 const dataDir = path.join(process.cwd(), '/data/')
-const templateDir = path.join(process.cwd(), '/templates/')
+
 
 app.use(express.static('public'))
 app.use(express.json())
@@ -26,16 +26,16 @@ app.post('/login', (req, res, next) => {
         const users = JSON.parse(data);
         if(users[username]) {
             if(users[username].password === password){
-                fs.readFile(templateDir + 'welcome', "utf-8", (error, data) => {
+                fs.readFile(compDir + 'welcome', "utf-8", (error, data) => {
                     if(error) throw error;
-                    const html = (data.split('${username}').join(`${username}`)).toString();
-                    res.json({auth: true, html});
+                    const greet = (data.split('${username}').join(`${username}`)).toString();
+                    res.json({auth: true, greet});
                 })
             } else {
-                res.send('<h1>Incorrect credentials</h1>')
+                res.json({auth: false})
             }
         } else {
-            res.send(`<h1>User: ${username} does not exist in the database.</h1>`)
+            res.json({auth: false})
         }
     })
 })

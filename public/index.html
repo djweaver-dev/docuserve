@@ -3,25 +3,51 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/e2350a0191.js" crossorigin="anonymous"></script>
         <title>DocuServe</title>
+        <link rel="stylesheet" href="css/colors.css">
         <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/margins.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="headwrapper">
-            <header>DocuServe</header>
-            <nav>
-                <form class="auth" id="loginForm">
-                    <input id="username" name="username" type="text" size="10">
-                    <input id="password" name="password" type="password" size="10">
-                    <input type="submit" value="Log In">
-                </form>
-            </nav>
-        </div>
+        <!--top section wrapper-->
+        <header>
+            <i class="far fa-file ma-2"></i>DocuServe
+        </header>
+
+        <!--main viewport and middle section wrapper-->
         <main>
-            <!--Rendered from server-->
+            <section id="explorer">
+                <div id="cn-prev" class="btn">
+                    <a id="prev" href="#">
+                        <i class="far fa-arrow-alt-circle-left"></i>
+                        Prev
+                    </a>
+                </div>
+
+                <div id="cn-search">
+                    <form id="search" class="search">
+                        <input type="text" name="query">
+                        <input type="submit" value="Query Database">
+                    </form>
+                </div>
+                
+                <div id="cn-next" class="btn">
+                    <a id="next" href="#">
+                        <i class="far fa-arrow-alt-circle-right"></i>
+                        Next
+                    </a>
+                </div>
+            </section>
         </main>
-        <footer></footer>
+
+        <!--bottom section wrapper-->
+        <footer>
+
+        </footer>
+
     </body>
     <script src="scripts/index.js"></script>
 </html>

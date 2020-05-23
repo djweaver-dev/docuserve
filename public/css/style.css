@@ -1,63 +1,84 @@
-:root {
-    --color-header: linear-gradient(to right, #000 0%, #0ac 100%);
-}
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    z-index: 0;
 }
-html, body {
+html {
     width: 100%;
     height: 100%;
+    font-size: 62.5%;
 }
 body {
-    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
     font-family: 'plex-serif';
 }
 header {
-    padding: 1rem;
-    font-size: 3.2rem;
-    color: #fff;
-}
-nav {
-    padding: 1rem;
-    display: flex;
-    font-size: 1.2rem;
-}
-nav ul li {
-    color: white;
-    list-style: none;
-    cursor: pointer;
-    padding: .5rem 3rem;
-    border: 1px solid grey;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-}
-nav ul li:hover {
-    background: white;
-    color: black;
-}
-.headwrapper{
-    background: var(--color-header);
-}
-main {
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    background: #ccc;
+    font-size: 7.2rem;
+    background: var(--color-red);
+    color: var(--color-lt);
+    text-shadow: 0rem 1rem 1rem var(--color-red-dk);
+    border-bottom: 4px solid var(--color-red-dk);
+    box-shadow: var(--shadow);
+}
+main {
+    background: var(--color-lt);
+}
+#explorer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--color-crm);
+    border: 4px solid var(--color-crm-lt);
+    border-right: 4px solid var(--color-crm-dk);
+    border-bottom: none;
+    border-left: none;
+    border-radius: 2rem 2rem 0rem 0rem;
+    box-shadow: var(--shadow);
+}
+.search {
+    text-align: center;
+    background: var(--color-crm-dk);
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 50rem;
 }
 
-.auth input {
-    background: transparent;
-    color: white;
-    font-family: 'plex-serif';
-    font-size: 1.2rem;
-    transition: all 250ms ease;
-    border: 1px solid white;
-    padding: .25rem 1rem;
+.search input[type="text"] {
+    width: 80%;
+    padding: 1rem;
+    margin: 1rem 0;   
+    font-size: 1.6rem;
+    font-family: 'plex-mono';
+    border: 1px solid var(--color-md);
+    border-radius: 1rem;
 }
-.auth input:hover {
-    background: white;
-    color: black;
+
+.btn {
+    text-align: center;
+    width: 6.4rem;
+    height: auto;
+    overflow: hidden;
+}
+.btn a {
+    text-decoration: none;
+    color: var(--color-crm-dk);
+    font-size: 2.4rem;
+    font-family: 'plex-sans';
+    font-weight: bold;
+    transition: color 250ms ease;
+}
+.btn a:hover {
+    color: var(--color-gre-dk);
+}
+.btn a i {
+    font-size: 6.4rem;
+}
+footer {
+    background: var(--color-red);
+    border-top: 4px solid var(--color-red-lt);
+    box-shadow: var(--shadow);
 }

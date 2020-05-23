@@ -1,0 +1,26 @@
+/* - - - body grid - - - */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 16fr 1fr;
+}
+header {
+    grid-column: 1 / 2;
+    z-index: 2;
+}
+main {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+    /* - - - main grid - - - */
+    #explorer {
+        grid-column: 4 / 10;
+        grid-row: 6 / 8;
+    }
+
+footer {
+    grid-column: 1 / 2;
+    z-index: 2;
+}
