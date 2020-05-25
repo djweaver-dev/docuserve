@@ -16,24 +16,16 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.use(multipart.array())
 
-app.get('/', (req, res, next) => {
-    console.log('root hit')
-})
-
-app.get('/hello', (req, res, next) => {
-    console.log('hello')
-})
-require('express-route-log')(app);
 app.get('/query/', (req, res, next) => {
     let term, nav;
     if(req.query.term) term = req.query.term;
     if(req.query.nav) nav = req.query.nav;
-
+    
     fs.readFile(dataDir + 'users.json', (error, data) => {
         if(error) throw error;
         const db = JSON.parse(data);
         const dbArr = Object.keys(db);
-
+        
         if(nav) {
             const refIndex = parseInt(req.query.refIndex, 10);
             if(nav === 'next') {
@@ -55,7 +47,7 @@ app.get('/query/', (req, res, next) => {
                 }
             }
         }
-
+        
         if(term) {
             if(db[term]) {
                 let index;
@@ -70,7 +62,7 @@ app.get('/query/', (req, res, next) => {
                 res.json({ html: '<h1>Record Not Found</h1>' })
             }
         }
-    
+        
     })
 })
 
@@ -97,8 +89,10 @@ app.post('/login', (req, res, next) => {
 })
 
 // app.get('*', (req, res, next) => {
-//     res.sendFile(publicDir+'index.html')
-// })
+    //     res.sendFile(publicDir+'index.html')
+    // })
+    
+require('express-route-log')(app);
 
 app.listen(port, () => {
     console.log('Server listening at port '+port)
