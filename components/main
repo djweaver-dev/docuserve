@@ -1,0 +1,26 @@
+<main>
+    <section id="viewport">
+    </section>
+    <section id="explorer">
+        <div id="cn-prev" class="btn">
+            <a id="prev">
+                <i class="far fa-arrow-alt-circle-left"></i>
+                Prev
+            </a>
+        </div>
+
+        <div id="cn-search">
+            <form id="search" action="/query/" method="get" class="search">
+                <input type="text" name="term">
+                <input type="submit" value="Query Database">
+            </form>
+        </div>
+
+        <div id="cn-next" class="btn">
+            <a id="next">
+                <i class="far fa-arrow-alt-circle-right"></i>
+                Next
+            </a>
+        </div>
+    </section>
+</main>

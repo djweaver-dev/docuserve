@@ -1,4 +1,12 @@
 {
-    "admin": { "password": "admin", "perms" : "all" },
-    "guest": { "password": "guest", "perms" : "view" }
+    "admin": { 
+        "password": "admin", 
+        "perms" : "all",
+        "databs" : ["My Database", "My Other Database", "Last Database"] 
+    },
+    "guest": { 
+        "password": "guest", 
+        "perms" : "view",
+        "databs" : false
+    }
 }

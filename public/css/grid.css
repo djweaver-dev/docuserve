@@ -11,13 +11,17 @@ header {
 main {
     grid-column: 1 / 2;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr 3fr;
 }
     /* - - - main grid - - - */
+    #viewport {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
     #explorer {
-        grid-column: 4 / 10;
-        grid-row: 6 / 8;
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
     }
 
 footer {

@@ -27,6 +27,16 @@ header {
 main {
     background: var(--color-lt);
 }
+#viewport {
+    background: var(--color-crm-lt);
+    overflow: hidden;
+    color: var(--color-dk);
+    border-radius: 2rem;
+    box-shadow: var(--shadow);
+    padding: 4rem;
+    font-size: 1.6rem;
+    font-family: 'plex-mono';
+}
 #explorer {
     display: flex;
     justify-content: space-evenly;
@@ -44,7 +54,6 @@ main {
     background: var(--color-crm-dk);
     padding: 2rem;
     border-radius: 1rem;
-    width: 50rem;
 }
 
 .search input[type="text"] {
